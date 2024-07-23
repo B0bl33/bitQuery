@@ -277,8 +277,9 @@ footer {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto repeat(4, 1fr);
-        margin-left: 20px; /* Add margin for spacing */
+        margin: 0 auto; /* Add margin for spacing */
         min-height: 200px; 
+        
     }
    
 }
