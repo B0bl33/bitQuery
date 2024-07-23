@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bitcoin Paradox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link"><img src="house.PNG" alt="Home"></a></li>
+                <li><a href="alertpage.html" id="home-link"><img src="alert.PNG" alt="alert page"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <button id="toggle-header">☰</button>
+    <main>
+
+      
+
+
+        <div id="timeline-view">
+            <div class="timeline-container">
+                <span class="timeline-label">NOOB</span> <!-- Start Text -->
+                <div class="chapter-buttons">
+                    <button class="chapter-button" data-chapter="1"><img src="ape.PNG" alt="Chapter 1"></button>
+                    <button class="chapter-button" data-chapter="2"><img src="cave.PNG" alt="Chapter 2"></button>
+                    <button class="chapter-button" data-chapter="3"><img src="evolcave.PNG" alt="Chapter 3"></button>
+                    <button class="chapter-button" data-chapter="4"><img src="corporate.PNG" alt="Chapter 4"></button>
+                    <button class="chapter-button" data-chapter="5"><img src="cordle.PNG" alt="Chapter 5"></button>
+                    <button class="chapter-button" data-chapter="6"><img src="lambo.PNG" alt="Chapter 6"></button>
+                </div>
+                <span class="timeline-label">PRO</span> <!-- End Text -->
+            </div>
+            <div class="timeline">
+                <div class="progress"></div>
+                <div class="markers">
+                    <div class="marker" data-chapter="1"></div>
+                    <div class="marker" data-chapter="2"></div>
+                    <div class="marker" data-chapter="3"></div>
+                    <div class="marker" data-chapter="4"></div>
+                    <div class="marker" data-chapter="5"></div>
+                    <div class="marker" data-chapter="6"></div>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="ad-space" id="left-ad-space">
+                    <div id="quiz-game">
+                        <h2>Bitcoin Quiz Game</h2>
+                        <p id="question"></p>
+                        <input type="text" id="answer" placeholder="Your answer here">
+                        <button id="submit-answer">Submit</button>
+                        <p id="result"></p>
+                    </div>
+                </div>
+                
+                <div class="content">
+                    <h1 id="chapter-title">Welcome</h1>
+                    <p id="chapter-content">Welcome to "The Bitcoin Paradox", a comprehensive guide to understanding the intricacies of Bitcoin. Click on any chapter to start reading.</p>
+                </div>
+                <div class="ad-space" id="right-ad-space"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 [@b0bcrypto & @Cryptojm99]. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

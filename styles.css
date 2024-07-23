@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1b0d4a, #00a2ff);
+    background-size: 400% 400%;
+    animation: gradientBackground 12s ease infinite;
+    color: #fff;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+        background-color: #023578;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color:  #3782f4;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #023578;
+    }
+}
+
+header {
+    background: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+header.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+}
+
+nav ul li a:hover {
+    background: rgba(0, 255, 34, 0.5)
+}
+
+nav ul li img {
+    width: 44px;
+    height: 44px;
+}
+
+#toggle-header {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100; /* Ensure the button is above other elements */
+}
+
+#home-link {
+    cursor: pointer;
+}
+
+#timeline-view {
+    display: block;
+}
+
+
+
+
+.timeline-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.timeline-label {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 25px;
+}
+
+.chapter-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+.chapter-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.chapter-button img {
+    width: 120px;
+    transition: 0.7s ease-in-out;
+}
+
+.chapter-button img:hover {
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Glow effect for futuristic look */
+    border-radius: 10px;
+}
+
+.timeline {
+    position: relative;
+    height: 10px; /* Slightly thinner for a sleek look */
+    background: #333; /* Darker background for contrast */
+    margin: 2rem 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #00ff00, #a0f693); /* Green gradient for progress */
+    width: 0%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Glow effect for futuristic look */
+    transition: width 0.3s ease;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.ad-space {
+    background: rgba(255, 255, 255, 0.2);
+    height: auto;
+    height: 400px;
+    border-radius: 10px;
+    padding: 3rem 1rem;
+    flex: 1;
+    margin: 0 1rem;
+    transition: border 0.3s ease-in-out;
+}
+
+.ad-space:hover {
+    border: 1px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    width: 50%;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center; /* Align text to the left for a book-like appearance */
+    height: 400px;
+    overflow-y: auto;
+    transition: border 0.3s ease-in-out;
+}
+
+.content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    margin-top: 0px;
+}
+
+.content p, .content ul {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.content ul {
+    list-style: disc inside;
+    padding-left: 1rem;
+}
+
+.content:hover {
+    border: 2px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+#left-ad-space {
+    max-height: 450px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+#left-ad-space h2 {
+    margin-top: 0px;
+}
+
+#right-ad-space {
+    max-height: 450px;
+    background-image: url('bookmaz.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#quiz-game {
+    color: #fff;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#quiz-game h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#quiz-game p {
+    margin: 10px 0;
+}
+
+#answer {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#submit-answer {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#submit-answer:hover {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.1); 
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media query for screens smaller than 650px */
+@media (max-width: 650px) {
+    main, .timeline-container, .timeline, .content-wrapper, .chapter-buttons, .chapter-button, .ad-space, .content, #quiz-game {
+        display: none;
+    }
+    
+    body {
+        background: url('warnthem.PNG') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 1050px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-label {
+        display: none; /* Hide the NOOB and PRO labels */
+    }
+
+    .chapter-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .chapter-button {
+        margin: 0.5rem;
+    }
+
+    .chapter-button img {
+        width: 80px;
+    }
+
+    .timeline {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .markers {
+        justify-content: space-around;
+    }
+
+    .content-wrapper {
+        display: block;
+       
+        width: 90%;
+    }
+
+    .content {
+        width: 90%;
+        margin-bottom: 2rem;
+        padding: 2rem; /* Add padding to prevent touching the sides */
+    }
+
+    .ad-space {
+        width: 90%;
+        margin: 0 0 2rem 0;
+        padding: 2rem; /* Add padding to prevent touching the sides */
+    }
+
+    #left-ad-space {
+        max-height: 300px; /* Reduce the height of the quiz ad space */
+    }
+
+    #right-ad-space {
+        max-height: 300px; /* Optional: Adjust the height of the right ad space if needed */
+    }
+
+    #quiz-game {
+        max-height: 300px;
+    }
+
+    #submit-answer {
+        margin-bottom: 1rem; /* Add margin to reduce blank space */
+    }
+}
